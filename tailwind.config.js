@@ -25,6 +25,9 @@ export default {
       fontFamily: {
         sans: ['Space Grotesk', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle at 15% 20%, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],
