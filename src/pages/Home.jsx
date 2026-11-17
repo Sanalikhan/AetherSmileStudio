@@ -68,7 +68,7 @@ const Home = ({ onBookingClick }) => {
             alt="Dental care"
             className="w-full h-full object-cover"
           />
-          <div className="absolute left-4 lg:-left-8 bottom-10 bg-dark-800/90 backdrop-blur-xl border border-dark-500 rounded-2xl p-6 shadow-xl">
+          <div className="absolute left-4 lg:left-6 bottom-10 bg-dark-800/90 backdrop-blur-xl border border-dark-500 rounded-2xl p-6 shadow-xl">
             <div className="flex items-center gap-1 text-primary text-3xl font-bold mb-1">
               4.9 <HiStar className="text-2xl" />
             </div>
