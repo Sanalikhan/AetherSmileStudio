@@ -1,16 +1,34 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { HiStar, HiCheckCircle } from 'react-icons/hi';
 import { reviews, stats } from '../data/reviews';
 
 const Reviews = () => {
   const [filter, setFilter] = useState('all');
+  const { t } = useTranslation();
 
   const filteredReviews = filter === 'all'
     ? reviews
     : reviews.filter(review => review.treatment === filter);
 
   const treatments = ['all', ...new Set(reviews.map(r => r.treatment))];
+
+  const getFilterLabel = (treatment) => {
+    const treatmentMap = {
+      'all': t('reviews.allReviews'),
+      'Teeth Whitening': t('reviews.filter.teethWhitening'),
+      'Dental Implants': t('reviews.filter.dentalImplants'),
+      'Invisible Aligners': t('reviews.filter.invisibleAligners'),
+      'Root Canal': t('reviews.filter.rootCanal'),
+      'General Checkup': t('reviews.filter.generalCheckup'),
+      'Cosmetic Dentistry': t('reviews.filter.cosmetic'),
+      'Teeth Cleaning': t('reviews.filter.teethCleaning'),
+      'Emergency Care': t('reviews.filter.emergency'),
+      'Pediatric Dentistry': t('reviews.filter.pediatric')
+    };
+    return treatmentMap[treatment] || treatment;
+  };
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) => (
@@ -30,11 +48,10 @@ const Reviews = () => {
         className="text-center mb-16"
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Patient <span className="text-primary">Reviews</span>
+          {t('reviews.title')} <span className="text-primary">{t('reviews.titleHighlight')}</span>
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Don't just take our word for it. Here's what our patients have to say
-          about their experience at Aether Smile Studio.
+          {t('reviews.subtitle')}
         </p>
       </motion.div>
 
@@ -46,10 +63,10 @@ const Reviews = () => {
         className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
       >
         {[
-          { label: 'Average Rating', value: stats.averageRating, icon: '⭐' },
-          { label: 'Total Reviews', value: stats.totalReviews.toLocaleString(), icon: '💬' },
-          { label: '5-Star Reviews', value: `${stats.fiveStarPercentage}%`, icon: '🌟' },
-          { label: 'Would Recommend', value: `${stats.recommendation}%`, icon: '👍' }
+          { label: t('reviews.stats.averageRating'), value: stats.averageRating, icon: '⭐' },
+          { label: t('reviews.stats.totalReviews'), value: stats.totalReviews.toLocaleString(), icon: '💬' },
+          { label: t('reviews.stats.fiveStar'), value: `${stats.fiveStarPercentage}%`, icon: '🌟' },
+          { label: t('reviews.stats.recommendation'), value: `${stats.recommendation}%`, icon: '👍' }
         ].map((stat, index) => (
           <div
             key={index}
@@ -74,7 +91,7 @@ const Reviews = () => {
                 : 'bg-dark-600 text-gray-300 hover:bg-dark-500'
             }`}
           >
-            {treatment === 'all' ? 'All Reviews' : treatment}
+            {getFilterLabel(treatment)}
           </button>
         ))}
       </div>
@@ -100,7 +117,7 @@ const Reviews = () => {
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-bold text-gray-100">{review.name}</h3>
                   {review.verified && (
-                    <HiCheckCircle className="text-primary" title="Verified Patient" />
+                    <HiCheckCircle className="text-primary" title={t('reviews.verified')} />
                   )}
                 </div>
                 <div className="flex items-center gap-1 text-sm mb-1">
@@ -135,23 +152,23 @@ const Reviews = () => {
         className="text-center bg-gradient-to-br from-dark-700 via-dark-600 to-dark-700 border border-dark-500 rounded-3xl p-16 mt-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
-          Ready to join our happy patients?
+          {t('reviews.cta.title')}
         </h2>
         <p className="text-gray-300 text-lg mb-6">
-          Experience the care that has earned us thousands of 5-star reviews.
+          {t('reviews.cta.subtitle')}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#booking"
             className="bg-primary text-dark-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20"
           >
-            Book Your Visit
+            {t('reviews.cta.bookButton')}
           </a>
           <a
             href="/treatments"
             className="bg-dark-600 text-gray-100 px-10 py-4 rounded-full font-bold text-lg hover:bg-dark-500 transition-all"
           >
-            View Treatments
+            {t('reviews.cta.treatmentsButton')}
           </a>
         </div>
       </motion.div>

@@ -144,16 +144,23 @@
     "close": "Close"
   },
   "reviews": {
-    "title": "What Our",
-    "titleHighlight": "Patients Say",
-    "subtitle": "Read honest reviews from our satisfied patients and learn about their experiences with our dental care.",
+    "title": "Patient",
+    "titleHighlight": "Reviews",
+    "subtitle": "Don't just take our word for it. Here's what our patients have to say about their experience at Aether Smile Studio.",
     "verified": "Verified Patient",
     "treatment": "Treatment",
+    "allReviews": "All Reviews",
     "stats": {
       "averageRating": "Average Rating",
       "totalReviews": "Total Reviews",
       "fiveStar": "5-Star Reviews",
       "recommendation": "Would Recommend"
+    },
+    "cta": {
+      "title": "Ready to join our happy patients?",
+      "subtitle": "Experience the care that has earned us thousands of 5-star reviews.",
+      "bookButton": "Book Your Visit",
+      "treatmentsButton": "View Treatments"
     },
     "filter": {
       "all": "All Treatments",
@@ -182,13 +189,14 @@
       "time": "Preferred Time",
       "treatment": "Treatment Type",
       "treatmentPlaceholder": "Select a treatment",
-      "message": "Additional Notes",
-      "messagePlaceholder": "Tell us about your dental concerns...",
-      "submit": "Book Appointment",
-      "cancel": "Cancel"
+      "message": "Additional Notes (Optional)",
+      "messagePlaceholder": "Any special requirements or concerns...",
+      "submit": "Confirm Booking",
+      "cancel": "Cancel",
+      "terms": "By submitting, you agree to our terms and privacy policy."
     },
     "success": {
-      "title": "Appointment Requested!",
+      "title": "Booking Confirmed!",
       "message": "Thank you for choosing Aether Smile Studio. We've received your appointment request and will contact you within 24 hours to confirm your booking.",
       "close": "Close"
     }
@@ -214,5 +222,36 @@
     "title": "Page Not Found",
     "message": "The page you're looking for doesn't exist or has been moved.",
     "button": "Back to Home"
+  },
+  "contact": {
+    "title": "Get In",
+    "titleHighlight": "Touch",
+    "subtitle": "Have questions? We're here to help. Reach out to us and we'll respond as soon as possible.",
+    "info": {
+      "title": "Contact Information",
+      "subtitle": "Feel free to contact us through any of these channels, or use the contact form.",
+      "phone": "Phone",
+      "phoneHours": "Mon-Fri, 8AM - 6PM",
+      "email": "Email",
+      "emailResponse": "We'll respond within 24 hours",
+      "location": "Location",
+      "hours": "Office Hours"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "phonePlaceholder": "(555) 123-4567",
+      "subjectPlaceholder": "How can we help you?",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "submit": "Send Message",
+      "success": "Message Sent Successfully!",
+      "successMessage": "Thank you for contacting us. We'll get back to you within 24 hours."
+    }
   }
 }

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { HiPhone, HiMail, HiLocationMarker, HiClock, HiCheckCircle } from 'react-icons/hi';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,10 +46,10 @@ const Contact = () => {
         className="text-center mb-16"
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Get In <span className="text-primary">Touch</span>
+          {t('contact.title')} <span className="text-primary">{t('contact.titleHighlight')}</span>
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Have questions? We're here to help. Reach out to us and we'll respond as soon as possible.
+          {t('contact.subtitle')}
         </p>
       </motion.div>
 
@@ -60,9 +62,9 @@ const Contact = () => {
           className="space-y-8"
         >
           <div>
-            <h2 className="text-3xl font-bold text-gray-100 mb-6">Contact Information</h2>
+            <h2 className="text-3xl font-bold text-gray-100 mb-6">{t('contact.info.title')}</h2>
             <p className="text-gray-300 mb-8">
-              Feel free to contact us through any of these channels, or use the contact form.
+              {t('contact.info.subtitle')}
             </p>
           </div>
 
@@ -72,11 +74,11 @@ const Contact = () => {
                 <HiPhone className="text-2xl text-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-100 mb-1">Phone</h3>
+                <h3 className="font-bold text-gray-100 mb-1">{t('contact.info.phone')}</h3>
                 <a href="tel:+15551234567" className="text-gray-300 hover:text-primary transition-colors">
                   (555) 123-4567
                 </a>
-                <p className="text-sm text-gray-400 mt-1">Mon-Fri, 8AM - 6PM</p>
+                <p className="text-sm text-gray-400 mt-1">{t('contact.info.phoneHours')}</p>
               </div>
             </div>
 
@@ -85,11 +87,11 @@ const Contact = () => {
                 <HiMail className="text-2xl text-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-100 mb-1">Email</h3>
+                <h3 className="font-bold text-gray-100 mb-1">{t('contact.info.email')}</h3>
                 <a href="mailto:info@aethersmile.com" className="text-gray-300 hover:text-primary transition-colors">
                   info@aethersmile.com
                 </a>
-                <p className="text-sm text-gray-400 mt-1">We'll respond within 24 hours</p>
+                <p className="text-sm text-gray-400 mt-1">{t('contact.info.emailResponse')}</p>
               </div>
             </div>
 
@@ -98,7 +100,7 @@ const Contact = () => {
                 <HiLocationMarker className="text-2xl text-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-100 mb-1">Location</h3>
+                <h3 className="font-bold text-gray-100 mb-1">{t('contact.info.location')}</h3>
                 <p className="text-gray-300">123 Dental Street</p>
                 <p className="text-gray-300">New York, NY 10001</p>
               </div>
@@ -109,11 +111,11 @@ const Contact = () => {
                 <HiClock className="text-2xl text-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-100 mb-1">Office Hours</h3>
+                <h3 className="font-bold text-gray-100 mb-1">{t('contact.info.hours')}</h3>
                 <div className="text-gray-300 space-y-1 text-sm">
-                  <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p>Saturday: 9:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>{t('footer.weekdays')}: {t('footer.weekdaysTime')}</p>
+                  <p>{t('footer.saturday')}: {t('footer.saturdayTime')}</p>
+                  <p>{t('footer.sunday')}: {t('footer.sundayTime')}</p>
                 </div>
               </div>
             </div>
@@ -149,19 +151,19 @@ const Contact = () => {
             >
               <HiCheckCircle className="mx-auto text-primary text-6xl mb-4" />
               <h3 className="text-2xl font-bold text-gray-100 mb-2">
-                Message Sent Successfully!
+                {t('contact.form.success')}
               </h3>
               <p className="text-gray-300">
-                Thank you for contacting us. We'll get back to you within 24 hours.
+                {t('contact.form.successMessage')}
               </p>
             </motion.div>
           ) : (
             <>
-              <h2 className="text-3xl font-bold text-gray-100 mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-100 mb-6">{t('contact.form.title')}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Full Name *
+                    {t('contact.form.name')} *
                   </label>
                   <input
                     type="text"
@@ -170,14 +172,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark-700 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="John Doe"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Email *
+                      {t('contact.form.email')} *
                     </label>
                     <input
                       type="email"
@@ -186,12 +188,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-dark-700 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="john@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Phone
+                      {t('contact.form.phone')}
                     </label>
                     <input
                       type="tel"
@@ -199,14 +201,14 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-dark-700 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="(555) 123-4567"
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Subject *
+                    {t('contact.form.subject')} *
                   </label>
                   <input
                     type="text"
@@ -215,13 +217,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark-700 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="How can we help you?"
+                    placeholder={t('contact.form.subjectPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Message *
+                    {t('contact.form.message')} *
                   </label>
                   <textarea
                     name="message"
@@ -230,7 +232,7 @@ const Contact = () => {
                     required
                     rows="6"
                     className="w-full px-4 py-3 bg-dark-700 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -238,7 +240,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-primary text-dark-900 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
                 >
-                  Send Message
+                  {t('contact.form.submit')}
                 </button>
               </form>
             </>

@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-dark-900 border-t border-dark-500 py-12">
@@ -14,32 +16,32 @@ const Footer = () => {
               Aether Smile Studio
             </h3>
             <p className="text-gray-300 text-sm">
-              Modern dentistry for confident smiles. Experience gentle care with advanced technology.
+              {t('footer.tagline')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-gray-100 font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-gray-100 font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-primary transition-colors">
-                  Home
+                  {t('nav.home')}
                 </Link>
               </li>
               <li>
                 <Link to="/treatments" className="text-gray-300 hover:text-primary transition-colors">
-                  Treatments
+                  {t('nav.treatments')}
                 </Link>
               </li>
               <li>
                 <Link to="/our-team" className="text-gray-300 hover:text-primary transition-colors">
-                  Our Team
+                  {t('nav.team')}
                 </Link>
               </li>
               <li>
                 <Link to="/reviews" className="text-gray-300 hover:text-primary transition-colors">
-                  Reviews
+                  {t('nav.reviews')}
                 </Link>
               </li>
             </ul>
@@ -47,7 +49,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-gray-100 font-semibold mb-4">Contact</h4>
+            <h4 className="text-gray-100 font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>123 Dental Street</li>
               <li>New York, NY 10001</li>
@@ -66,11 +68,11 @@ const Footer = () => {
 
           {/* Hours */}
           <div>
-            <h4 className="text-gray-100 font-semibold mb-4">Hours</h4>
+            <h4 className="text-gray-100 font-semibold mb-4">{t('footer.hours')}</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Monday - Friday: 8AM - 6PM</li>
-              <li>Saturday: 9AM - 4PM</li>
-              <li>Sunday: Closed</li>
+              <li>{t('footer.weekdays')}: {t('footer.weekdaysTime')}</li>
+              <li>{t('footer.saturday')}: {t('footer.saturdayTime')}</li>
+              <li>{t('footer.sunday')}: {t('footer.sundayTime')}</li>
             </ul>
           </div>
         </div>
@@ -105,7 +107,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-sm text-gray-400">
-          © {currentYear} Aether Smile Studio. All rights reserved.
+          © {currentYear} Aether Smile Studio. {t('footer.rights')}
         </div>
       </div>
     </footer>

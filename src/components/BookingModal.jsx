@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { HiX, HiCheckCircle } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const BookingModal = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,7 +57,7 @@ const BookingModal = ({ isOpen, onClose }) => {
         >
           {/* Header */}
           <div className="flex justify-between items-center p-6 border-b border-dark-500">
-            <h2 className="text-2xl font-bold text-gray-100">Book Your Appointment</h2>
+            <h2 className="text-2xl font-bold text-gray-100">{t('booking.title')}</h2>
             <button
               onClick={onClose}
               className="text-gray-300 hover:text-primary transition-colors"
@@ -74,13 +76,13 @@ const BookingModal = ({ isOpen, onClose }) => {
               >
                 <HiCheckCircle className="mx-auto text-primary text-6xl mb-4" />
                 <h3 className="text-2xl font-bold text-gray-100 mb-2">
-                  Booking Confirmed!
+                  {t('booking.success.title')}
                 </h3>
                 <p className="text-gray-300">
-                  Thank you, {formData.name}! We'll send a confirmation email to {formData.email}.
+                  {t('booking.success.message')}
                 </p>
                 <p className="text-gray-400 mt-4 text-sm">
-                  Your appointment is scheduled for {formData.date} at {formData.time}.
+                  {formData.date} - {formData.time}
                 </p>
               </motion.div>
             ) : (
@@ -88,7 +90,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Full Name *
+                    {t('booking.form.name')} *
                   </label>
                   <input
                     type="text"
@@ -97,7 +99,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-dark-600 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                    placeholder="John Doe"
+                    placeholder={t('booking.form.namePlaceholder')}
                   />
                 </div>
 
@@ -105,7 +107,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Email *
+                      {t('booking.form.email')} *
                     </label>
                     <input
                       type="email"
@@ -114,12 +116,12 @@ const BookingModal = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-dark-600 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="john@example.com"
+                      placeholder={t('booking.form.emailPlaceholder')}
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Phone *
+                      {t('booking.form.phone')} *
                     </label>
                     <input
                       type="tel"
@@ -128,7 +130,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-dark-600 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
-                      placeholder="(555) 123-4567"
+                      placeholder={t('booking.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
@@ -137,7 +139,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Preferred Date *
+                      {t('booking.form.date')} *
                     </label>
                     <input
                       type="date"
@@ -151,7 +153,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Preferred Time *
+                      {t('booking.form.time')} *
                     </label>
                     <select
                       name="time"
@@ -160,7 +162,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                       required
                       className="w-full px-4 py-3 bg-dark-600 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
                     >
-                      <option value="">Select a time</option>
+                      <option value="">{t('booking.form.time')}</option>
                       <option value="9:00 AM">9:00 AM</option>
                       <option value="10:00 AM">10:00 AM</option>
                       <option value="11:00 AM">11:00 AM</option>
@@ -177,7 +179,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 {/* Treatment */}
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Treatment Type *
+                    {t('booking.form.treatment')} *
                   </label>
                   <select
                     name="treatment"
@@ -186,7 +188,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                     required
                     className="w-full px-4 py-3 bg-dark-600 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors"
                   >
-                    <option value="">Select a treatment</option>
+                    <option value="">{t('booking.form.treatmentPlaceholder')}</option>
                     <option value="General Checkup">General Checkup</option>
                     <option value="Teeth Cleaning">Teeth Cleaning</option>
                     <option value="Teeth Whitening">Teeth Whitening</option>
@@ -201,7 +203,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 {/* Notes */}
                 <div>
                   <label className="block text-sm font-medium text-gray-200 mb-2">
-                    Additional Notes (Optional)
+                    {t('booking.form.message')}
                   </label>
                   <textarea
                     name="notes"
@@ -209,7 +211,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                     onChange={handleChange}
                     rows="3"
                     className="w-full px-4 py-3 bg-dark-600 border border-dark-500 rounded-xl text-gray-100 focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="Any special requirements or concerns..."
+                    placeholder={t('booking.form.messagePlaceholder')}
                   />
                 </div>
 
@@ -218,11 +220,11 @@ const BookingModal = ({ isOpen, onClose }) => {
                   type="submit"
                   className="w-full bg-primary text-dark-900 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
                 >
-                  Confirm Booking
+                  {t('booking.form.submit')}
                 </button>
 
                 <p className="text-xs text-gray-400 text-center">
-                  By submitting, you agree to our terms and privacy policy.
+                  {t('booking.form.terms')}
                 </p>
               </form>
             )}

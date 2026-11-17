@@ -144,16 +144,23 @@
     "close": "Kapat"
   },
   "reviews": {
-    "title": "Hastalarımız",
-    "titleHighlight": "Ne Diyor",
-    "subtitle": "Memnun hastalarımızdan dürüst yorumları okuyun ve diş bakımımızla ilgili deneyimleri hakkında bilgi edinin.",
+    "title": "Hasta",
+    "titleHighlight": "Yorumları",
+    "subtitle": "Sadece bizim sözümüze güvenmeyin. İşte hastalarımızın Aether Smile Studio'daki deneyimleri hakkında söyledikleri.",
     "verified": "Doğrulanmış Hasta",
     "treatment": "Tedavi",
+    "allReviews": "Tüm Yorumlar",
     "stats": {
       "averageRating": "Ortalama Değerlendirme",
       "totalReviews": "Toplam Yorum",
       "fiveStar": "5 Yıldızlı Yorumlar",
       "recommendation": "Tavsiye Eder"
+    },
+    "cta": {
+      "title": "Mutlu hastalarımıza katılmaya hazır mısınız?",
+      "subtitle": "Bize binlerce 5 yıldızlı yorum kazandıran bakımı deneyimleyin.",
+      "bookButton": "Ziyaretinizi Rezerve Edin",
+      "treatmentsButton": "Tedavileri Görüntüle"
     },
     "filter": {
       "all": "Tüm Tedaviler",
@@ -182,13 +189,14 @@
       "time": "Tercih Edilen Saat",
       "treatment": "Tedavi Türü",
       "treatmentPlaceholder": "Bir tedavi seçin",
-      "message": "Ek Notlar",
-      "messagePlaceholder": "Diş endişeleriniz hakkında bize bilgi verin...",
-      "submit": "Randevu Al",
-      "cancel": "İptal"
+      "message": "Ek Notlar (Opsiyonel)",
+      "messagePlaceholder": "Özel gereksinimler veya endişeler...",
+      "submit": "Rezervasyonu Onayla",
+      "cancel": "İptal",
+      "terms": "Göndererek, şartlarımızı ve gizlilik politikamızı kabul etmiş olursunuz."
     },
     "success": {
-      "title": "Randevu Talep Edildi!",
+      "title": "Rezervasyon Onaylandı!",
       "message": "Aether Smile Studio'yu seçtiğiniz için teşekkür ederiz. Randevu talebinizi aldık ve rezervasyonunuzu onaylamak için 24 saat içinde sizinle iletişime geçeceğiz.",
       "close": "Kapat"
     }
@@ -214,5 +222,36 @@
     "title": "Sayfa Bulunamadı",
     "message": "Aradığınız sayfa mevcut değil veya taşınmış.",
     "button": "Ana Sayfaya Dön"
+  },
+  "contact": {
+    "title": "İletişime",
+    "titleHighlight": "Geçin",
+    "subtitle": "Sorularınız mı var? Yardımcı olmak için buradayız. Bize ulaşın, en kısa sürede yanıt vereceğiz.",
+    "info": {
+      "title": "İletişim Bilgileri",
+      "subtitle": "Bu kanallardan herhangi biri aracılığıyla bizimle iletişime geçmekten çekinmeyin veya iletişim formunu kullanın.",
+      "phone": "Telefon",
+      "phoneHours": "Pzt-Cum, 08:00 - 18:00",
+      "email": "E-posta",
+      "emailResponse": "24 saat içinde yanıt vereceğiz",
+      "location": "Konum",
+      "hours": "Çalışma Saatleri"
+    },
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "emailPlaceholder": "ahmet@ornek.com",
+      "phonePlaceholder": "(555) 123-4567",
+      "subjectPlaceholder": "Size nasıl yardımcı olabiliriz?",
+      "messagePlaceholder": "Sorgunuz hakkında daha fazla bilgi verin...",
+      "submit": "Mesaj Gönder",
+      "success": "Mesaj Başarıyla Gönderildi!",
+      "successMessage": "Bizimle iletişime geçtiğiniz için teşekkür ederiz. 24 saat içinde size geri döneceğiz."
+    }
   }
 }
