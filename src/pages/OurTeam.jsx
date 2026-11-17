@@ -21,6 +21,14 @@ const OurTeam = () => {
           Our experienced dental professionals are dedicated to providing you with
           exceptional care in a comfortable, welcoming environment.
         </p>
+
+        {/* Disclaimer */}
+        <div className="mt-8 max-w-2xl mx-auto">
+          <p className="text-sm text-gray-400 italic bg-dark-700/50 border border-dark-500 rounded-lg px-6 py-3 text-center">
+            <strong>Disclaimer:</strong> The profiles and images shown here are fictional and for demonstration purposes only.
+            Any resemblance to actual persons, living or deceased, or actual events is purely coincidental.
+          </p>
+        </div>
       </motion.div>
 
       {/* Team Grid */}
