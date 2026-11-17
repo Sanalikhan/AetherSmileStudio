@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "team": "Our Team",
+    "reviews": "Reviews",
+    "bookAppointment": "Book Appointment"
+  },
+  "hero": {
+    "badge": "Accepting new patients",
+    "title": "Modern dentistry for a",
+    "titleHighlight": "confident smile.",
+    "subtitle": "Gentle care, advanced technology, and online booking that takes less than a minute.",
+    "bookButton": "Book Your Appointment",
+    "rating": "Rated by 12,000+ patients"
+  },
+  "stats": {
+    "patients": "Happy patients",
+    "rating": "Average rating",
+    "experience": "Of experience"
+  },
+  "treatments": {
+    "title": "Treatments",
+    "items": {
+      "teethWhitening": {
+        "title": "Teeth Whitening",
+        "description": "Professional whitening treatment for a brighter, more confident smile in just one visit.",
+        "fullDescription": "Our advanced teeth whitening treatment uses professional-grade materials to safely lighten your teeth by several shades. The procedure is quick, comfortable, and delivers immediate results that can last for years with proper care.",
+        "duration": "60-90 minutes",
+        "benefits": [
+          "Results visible immediately",
+          "Safe and effective procedure",
+          "Long-lasting bright smile",
+          "Boosts confidence",
+          "Non-invasive treatment"
+        ]
+      },
+      "invisibleAligners": {
+        "title": "Invisible Aligners",
+        "description": "Straighten your teeth discreetly with custom-made clear aligners. Comfortable and virtually invisible.",
+        "fullDescription": "Our invisible aligners offer a modern alternative to traditional braces. Custom-made for your teeth, these clear aligners gradually shift your teeth into the desired position without the discomfort or appearance of metal braces.",
+        "duration": "12-18 months",
+        "benefits": [
+          "Nearly invisible treatment",
+          "Removable for eating and cleaning",
+          "More comfortable than braces",
+          "Predictable results",
+          "No dietary restrictions"
+        ]
+      },
+      "dentalImplants": {
+        "title": "Dental Implants",
+        "description": "Permanent, natural-looking tooth replacement solution that looks and functions like your natural teeth.",
+        "fullDescription": "Dental implants are the gold standard for replacing missing teeth. They consist of a titanium post surgically placed in your jawbone, topped with a natural-looking crown. Implants preserve bone structure and provide a permanent solution.",
+        "duration": "3-6 months (full process)",
+        "benefits": [
+          "Permanent solution",
+          "Natural appearance and function",
+          "Preserves jawbone",
+          "No impact on adjacent teeth",
+          "Highly durable"
+        ]
+      },
+      "teethCleaning": {
+        "title": "Teeth Cleaning",
+        "description": "Professional deep cleaning to remove plaque, tartar, and stains for optimal oral health.",
+        "fullDescription": "Regular professional teeth cleaning is essential for maintaining healthy teeth and gums. Our dental hygienists use advanced techniques to remove plaque and tartar buildup, polish your teeth, and provide personalized oral hygiene guidance.",
+        "duration": "45-60 minutes",
+        "benefits": [
+          "Prevents cavities and gum disease",
+          "Removes stubborn stains",
+          "Freshens breath",
+          "Early detection of issues",
+          "Maintains overall health"
+        ]
+      },
+      "rootCanal": {
+        "title": "Root Canal Therapy",
+        "description": "Save your natural tooth with gentle, pain-free root canal treatment using modern techniques.",
+        "fullDescription": "Root canal therapy removes infected or damaged pulp from inside your tooth, saving it from extraction. With modern anesthesia and techniques, the procedure is comfortable and highly successful.",
+        "duration": "60-90 minutes",
+        "benefits": [
+          "Saves your natural tooth",
+          "Relieves pain",
+          "Prevents infection spread",
+          "High success rate",
+          "Comfortable procedure"
+        ]
+      },
+      "cosmetic": {
+        "title": "Cosmetic Dentistry",
+        "description": "Transform your smile with veneers, bonding, and other aesthetic dental procedures.",
+        "fullDescription": "Our cosmetic dentistry services enhance the appearance of your smile. From porcelain veneers to tooth bonding and gum contouring, we offer comprehensive solutions tailored to your aesthetic goals.",
+        "duration": "Varies by procedure",
+        "benefits": [
+          "Enhanced smile aesthetics",
+          "Improved confidence",
+          "Customized solutions",
+          "Natural-looking results",
+          "Long-lasting improvements"
+        ]
+      }
+    },
+    "duration": "Duration",
+    "benefits": "Benefits",
+    "learnMore": "Learn More",
+    "close": "Close",
+    "bookTreatment": "Book This Treatment",
+    "consultation": {
+      "title": "Not sure which treatment you need?",
+      "subtitle": "Book a consultation and we'll help you find the perfect solution.",
+      "button": "Schedule Consultation"
+    },
+    "pageSubtitle": "Comprehensive dental care using the latest technology and techniques. From preventive care to advanced procedures, we've got you covered."
+  },
+  "cta": {
+    "title": "Your best smile starts here.",
+    "subtitle": "Choose a time online and get an automatic reminder.",
+    "button": "Book Now"
+  },
+  "team": {
+    "title": "Meet Our",
+    "titleHighlight": "Expert Team",
+    "subtitle": "Our experienced dental professionals are dedicated to providing you with exceptional care in a comfortable, welcoming environment.",
+    "disclaimer": "Disclaimer:",
+    "disclaimerText": "The profiles and images shown here are fictional and for demonstration purposes only. Any resemblance to actual persons, living or deceased, or actual events is purely coincidental.",
+    "education": "Education & Certifications",
+    "achievements": "Key Achievements",
+    "values": {
+      "title": "Our Core Values",
+      "patientCare": {
+        "title": "Patient-Centered Care",
+        "description": "Your comfort and satisfaction are our top priorities in every interaction."
+      },
+      "learning": {
+        "title": "Continuous Learning",
+        "description": "We stay current with the latest dental technologies and techniques."
+      },
+      "integrity": {
+        "title": "Integrity & Transparency",
+        "description": "Honest communication and ethical practice guide everything we do."
+      }
+    },
+    "close": "Close"
+  },
+  "reviews": {
+    "title": "What Our",
+    "titleHighlight": "Patients Say",
+    "subtitle": "Read honest reviews from our satisfied patients and learn about their experiences with our dental care.",
+    "verified": "Verified Patient",
+    "treatment": "Treatment",
+    "stats": {
+      "averageRating": "Average Rating",
+      "totalReviews": "Total Reviews",
+      "fiveStar": "5-Star Reviews",
+      "recommendation": "Would Recommend"
+    },
+    "filter": {
+      "all": "All Treatments",
+      "teethWhitening": "Teeth Whitening",
+      "dentalImplants": "Dental Implants",
+      "invisibleAligners": "Invisible Aligners",
+      "rootCanal": "Root Canal",
+      "generalCheckup": "General Checkup",
+      "cosmetic": "Cosmetic Dentistry",
+      "teethCleaning": "Teeth Cleaning",
+      "emergency": "Emergency Care",
+      "pediatric": "Pediatric Dentistry"
+    }
+  },
+  "booking": {
+    "title": "Book Your Appointment",
+    "subtitle": "Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "date": "Preferred Date",
+      "time": "Preferred Time",
+      "treatment": "Treatment Type",
+      "treatmentPlaceholder": "Select a treatment",
+      "message": "Additional Notes",
+      "messagePlaceholder": "Tell us about your dental concerns...",
+      "submit": "Book Appointment",
+      "cancel": "Cancel"
+    },
+    "success": {
+      "title": "Appointment Requested!",
+      "message": "Thank you for choosing Aether Smile Studio. We've received your appointment request and will contact you within 24 hours to confirm your booking.",
+      "close": "Close"
+    }
+  },
+  "footer": {
+    "tagline": "Modern dentistry for confident smiles.",
+    "quickLinks": "Quick Links",
+    "treatments": "Treatments",
+    "contact": "Contact Us",
+    "hours": "Hours",
+    "weekdays": "Monday - Friday",
+    "weekdaysTime": "9:00 AM - 6:00 PM",
+    "saturday": "Saturday",
+    "saturdayTime": "10:00 AM - 4:00 PM",
+    "sunday": "Sunday",
+    "sundayTime": "Closed",
+    "social": "Follow Us",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "by": "by"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you're looking for doesn't exist or has been moved.",
+    "button": "Back to Home"
+  }
+}

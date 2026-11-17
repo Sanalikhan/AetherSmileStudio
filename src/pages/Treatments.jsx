@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { HiCheckCircle, HiClock } from 'react-icons/hi';
-import { treatments } from '../data/treatments';
+import { getTranslatedTreatments } from '../utils/translatedData';
 
 const Treatments = ({ onBookingClick }) => {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
+  const { t } = useTranslation();
+  const treatments = getTranslatedTreatments(t);
 
   return (
     <div className="min-h-screen px-6 lg:px-16 py-16">
@@ -15,11 +18,10 @@ const Treatments = ({ onBookingClick }) => {
         className="text-center mb-16"
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Our <span className="text-primary">Treatments</span>
+          {t('nav.treatments')} <span className="text-primary"></span>
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Comprehensive dental care using the latest technology and techniques.
-          From preventive care to advanced procedures, we've got you covered.
+          {t('treatments.pageSubtitle')}
         </p>
       </motion.div>
 
@@ -85,7 +87,7 @@ const Treatments = ({ onBookingClick }) => {
                 {selectedTreatment.fullDescription}
               </p>
 
-              <h3 className="text-2xl font-bold text-gray-100 mb-4">Benefits</h3>
+              <h3 className="text-2xl font-bold text-gray-100 mb-4">{t('treatments.benefits')}</h3>
               <ul className="space-y-3 mb-8">
                 {selectedTreatment.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start text-gray-300">
@@ -103,13 +105,13 @@ const Treatments = ({ onBookingClick }) => {
                   }}
                   className="flex-1 bg-primary text-dark-900 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all"
                 >
-                  Book This Treatment
+                  {t('treatments.bookTreatment')}
                 </button>
                 <button
                   onClick={() => setSelectedTreatment(null)}
                   className="px-8 bg-dark-600 text-gray-100 py-4 rounded-xl font-bold hover:bg-dark-500 transition-all"
                 >
-                  Close
+                  {t('treatments.close')}
                 </button>
               </div>
             </div>
@@ -125,16 +127,16 @@ const Treatments = ({ onBookingClick }) => {
         className="text-center bg-gradient-to-br from-dark-700 via-dark-600 to-dark-700 border border-dark-500 rounded-3xl p-16 mt-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
-          Not sure which treatment you need?
+          {t('treatments.consultation.title')}
         </h2>
         <p className="text-gray-300 text-lg mb-6">
-          Book a consultation and we'll help you find the perfect solution.
+          {t('treatments.consultation.subtitle')}
         </p>
         <button
           onClick={onBookingClick}
           className="bg-primary text-dark-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20"
         >
-          Schedule Consultation
+          {t('treatments.consultation.button')}
         </button>
       </motion.div>
     </div>

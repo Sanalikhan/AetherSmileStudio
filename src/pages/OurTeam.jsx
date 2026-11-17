@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { HiAcademicCap, HiStar } from 'react-icons/hi';
 import { teamMembers } from '../data/team';
 
 const OurTeam = () => {
   const [selectedMember, setSelectedMember] = useState(null);
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen px-6 lg:px-16 py-16">
@@ -15,18 +17,16 @@ const OurTeam = () => {
         className="text-center mb-16"
       >
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Meet Our <span className="text-primary">Expert Team</span>
+          {t('team.title')} <span className="text-primary">{t('team.titleHighlight')}</span>
         </h1>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Our experienced dental professionals are dedicated to providing you with
-          exceptional care in a comfortable, welcoming environment.
+          {t('team.subtitle')}
         </p>
 
         {/* Disclaimer */}
         <div className="mt-8 max-w-2xl mx-auto">
           <p className="text-sm text-gray-400 italic bg-dark-700/50 border border-dark-500 rounded-lg px-6 py-3 text-center">
-            <strong>Disclaimer:</strong> The profiles and images shown here are fictional and for demonstration purposes only.
-            Any resemblance to actual persons, living or deceased, or actual events is purely coincidental.
+            <strong>{t('team.disclaimer')}</strong> {t('team.disclaimerText')}
           </p>
         </div>
       </motion.div>
@@ -93,7 +93,7 @@ const OurTeam = () => {
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-gray-100 mb-3 flex items-center">
                     <HiAcademicCap className="mr-2 text-primary" />
-                    Education & Certifications
+                    {t('team.education')}
                   </h3>
                   <ul className="space-y-2">
                     {selectedMember.education.map((edu, index) => (
@@ -107,7 +107,7 @@ const OurTeam = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-100 mb-3 flex items-center">
                     <HiStar className="mr-2 text-primary" />
-                    Key Achievements
+                    {t('team.achievements')}
                   </h3>
                   <ul className="space-y-2">
                     {selectedMember.achievements.map((achievement, index) => (
@@ -124,7 +124,7 @@ const OurTeam = () => {
                 onClick={() => setSelectedMember(null)}
                 className="w-full bg-dark-600 text-gray-100 py-4 rounded-xl font-bold hover:bg-dark-500 transition-all"
               >
-                Close
+                {t('team.close')}
               </button>
             </div>
           </motion.div>
@@ -139,21 +139,21 @@ const OurTeam = () => {
         className="mt-20 bg-gradient-to-br from-dark-700 via-dark-600 to-dark-700 border border-dark-500 rounded-3xl p-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8 text-center">
-          Our Core Values
+          {t('team.values.title')}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: 'Patient-Centered Care',
-              description: 'Your comfort and satisfaction are our top priorities in every interaction.'
+              title: t('team.values.patientCare.title'),
+              description: t('team.values.patientCare.description')
             },
             {
-              title: 'Continuous Learning',
-              description: 'We stay current with the latest dental technologies and techniques.'
+              title: t('team.values.learning.title'),
+              description: t('team.values.learning.description')
             },
             {
-              title: 'Integrity & Transparency',
-              description: 'Honest communication and ethical practice guide everything we do.'
+              title: t('team.values.integrity.title'),
+              description: t('team.values.integrity.description')
             }
           ].map((value, index) => (
             <div key={index} className="text-center">

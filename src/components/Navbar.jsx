@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = ({ onBookingClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Treatments', path: '/treatments' },
-    { name: 'Our Team', path: '/our-team' },
-    { name: 'Reviews', path: '/reviews' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.treatments'), path: '/treatments' },
+    { name: t('nav.team'), path: '/our-team' },
+    { name: t('nav.reviews'), path: '/reviews' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -41,13 +43,16 @@ const Navbar = ({ onBookingClick }) => {
             ))}
           </ul>
 
-          {/* Book Button */}
-          <button
-            onClick={onBookingClick}
-            className="hidden md:block bg-primary text-dark-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
-          >
-            Book a Visit
-          </button>
+          {/* Language Switcher and Book Button */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSwitcher />
+            <button
+              onClick={onBookingClick}
+              className="bg-primary text-dark-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all hover:shadow-lg hover:shadow-primary/20"
+            >
+              {t('nav.bookAppointment')}
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -73,6 +78,9 @@ const Navbar = ({ onBookingClick }) => {
                 {item.name}
               </Link>
             ))}
+            <div className="pt-2">
+              <LanguageSwitcher />
+            </div>
             <button
               onClick={() => {
                 setIsOpen(false);
@@ -80,7 +88,7 @@ const Navbar = ({ onBookingClick }) => {
               }}
               className="w-full bg-primary text-dark-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-opacity-90 transition-all"
             >
-              Book a Visit
+              {t('nav.bookAppointment')}
             </button>
           </div>
         )}

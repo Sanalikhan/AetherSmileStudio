@@ -1,10 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { HiStar } from 'react-icons/hi';
 import { fadeInUp, staggerContainer, staggerItem } from '../utils/animations';
-import { treatments } from '../data/treatments';
+import { getTranslatedTreatments } from '../utils/translatedData';
 
 const Home = ({ onBookingClick }) => {
+  const { t } = useTranslation();
+  const treatments = getTranslatedTreatments(t);
   const statsRef = useRef(null);
   const servicesRef = useRef(null);
 
@@ -37,23 +40,23 @@ const Home = ({ onBookingClick }) => {
           className="space-y-6"
         >
           <span className="inline-block border border-primary/30 text-primary px-4 py-2 rounded-full text-sm bg-primary/5">
-            ● Accepting new patients
+            ● {t('hero.badge')}
           </span>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Modern dentistry for a{' '}
-            <span className="text-primary">confident smile.</span>
+            {t('hero.title')}{' '}
+            <span className="text-primary">{t('hero.titleHighlight')}</span>
           </h1>
 
           <p className="text-lg text-gray-300 max-w-lg">
-            Gentle care, advanced technology, and online booking that takes less than a minute.
+            {t('hero.subtitle')}
           </p>
 
           <button
             onClick={onBookingClick}
             className="bg-primary text-dark-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40"
           >
-            Book Your Appointment
+            {t('hero.bookButton')}
           </button>
         </motion.div>
 
@@ -72,7 +75,7 @@ const Home = ({ onBookingClick }) => {
             <div className="flex items-center gap-1 text-primary text-3xl font-bold mb-1">
               4.9 <HiStar className="text-2xl" />
             </div>
-            <p className="text-sm text-gray-300">Rated by 12,000+ patients</p>
+            <p className="text-sm text-gray-300">{t('hero.rating')}</p>
           </div>
         </motion.div>
       </section>
@@ -81,9 +84,9 @@ const Home = ({ onBookingClick }) => {
       <section ref={statsRef} className="px-6 lg:px-16 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
-            { value: '12k+', label: 'Happy patients' },
-            { value: '4.9', label: 'Average rating' },
-            { value: '15 yrs', label: 'Of experience' }
+            { value: '12k+', label: t('stats.patients') },
+            { value: '4.9', label: t('stats.rating') },
+            { value: '15 yrs', label: t('stats.experience') }
           ].map((stat, index) => (
             <motion.div
               key={index}
@@ -108,7 +111,7 @@ const Home = ({ onBookingClick }) => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-12 text-gray-100"
         >
-          Treatments
+          {t('treatments.title')}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -146,16 +149,16 @@ const Home = ({ onBookingClick }) => {
           className="space-y-6"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-100">
-            Your best smile starts here.
+            {t('cta.title')}
           </h2>
           <p className="text-gray-300 text-lg">
-            Choose a time online and get an automatic reminder.
+            {t('cta.subtitle')}
           </p>
           <button
             onClick={onBookingClick}
             className="bg-primary text-dark-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20"
           >
-            Book Now
+            {t('cta.button')}
           </button>
         </motion.div>
       </section>

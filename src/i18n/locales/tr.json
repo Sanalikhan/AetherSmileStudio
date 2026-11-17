@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "treatments": "Tedaviler",
+    "team": "Ekibimiz",
+    "reviews": "Yorumlar",
+    "bookAppointment": "Randevu Al"
+  },
+  "hero": {
+    "badge": "Yeni hastalar kabul ediliyor",
+    "title": "Kendinden emin bir gülümseme için",
+    "titleHighlight": "modern diş hekimliği.",
+    "subtitle": "Nazik bakım, ileri teknoloji ve bir dakikadan kısa süren online randevu sistemi.",
+    "bookButton": "Randevunuzu Alın",
+    "rating": "12.000'den fazla hasta tarafından değerlendirildi"
+  },
+  "stats": {
+    "patients": "Mutlu hasta",
+    "rating": "Ortalama değerlendirme",
+    "experience": "Deneyim"
+  },
+  "treatments": {
+    "title": "Tedaviler",
+    "items": {
+      "teethWhitening": {
+        "title": "Diş Beyazlatma",
+        "description": "Sadece bir seansta daha parlak ve kendinden emin bir gülümseme için profesyonel beyazlatma tedavisi.",
+        "fullDescription": "Gelişmiş diş beyazlatma tedavimiz, dişlerinizi güvenli bir şekilde birkaç ton açmak için profesyonel kalitede malzemeler kullanır. İşlem hızlı, rahat ve uygun bakımla yıllarca sürebilecek anında sonuçlar sunar.",
+        "duration": "60-90 dakika",
+        "benefits": [
+          "Anında görülebilir sonuçlar",
+          "Güvenli ve etkili prosedür",
+          "Uzun ömürlü parlak gülüş",
+          "Özgüven artırır",
+          "İnvaziv olmayan tedavi"
+        ]
+      },
+      "invisibleAligners": {
+        "title": "Görünmez Plaklar",
+        "description": "Özel yapım şeffaf plaklar ile dişlerinizi gizlice düzeltin. Rahat ve neredeyse görünmez.",
+        "fullDescription": "Görünmez plaklarımız geleneksel tellere modern bir alternatif sunar. Dişlerinize özel yapılan bu şeffaf plaklar, metal tellerin rahatsızlığı veya görünümü olmadan dişlerinizi yavaşça istenen konuma getirir.",
+        "duration": "12-18 ay",
+        "benefits": [
+          "Neredeyse görünmez tedavi",
+          "Yemek ve temizlik için çıkarılabilir",
+          "Tellerden daha rahat",
+          "Öngörülebilir sonuçlar",
+          "Diyet kısıtlaması yok"
+        ]
+      },
+      "dentalImplants": {
+        "title": "Diş İmplantları",
+        "description": "Doğal dişleriniz gibi görünen ve işlev gören kalıcı, doğal görünümlü diş değiştirme çözümü.",
+        "fullDescription": "Diş implantları, eksik dişlerin değiştirilmesinde altın standarttır. Çene kemiğinize cerrahi olarak yerleştirilen bir titanyum direk ve üzerine doğal görünümlü bir kurondan oluşur. İmplantlar kemik yapısını korur ve kalıcı bir çözüm sağlar.",
+        "duration": "3-6 ay (tam süreç)",
+        "benefits": [
+          "Kalıcı çözüm",
+          "Doğal görünüm ve fonksiyon",
+          "Çene kemiğini korur",
+          "Komşu dişlere etki etmez",
+          "Son derece dayanıklı"
+        ]
+      },
+      "teethCleaning": {
+        "title": "Diş Temizliği",
+        "description": "Optimal ağız sağlığı için plak, diş taşı ve lekeleri gidermek için profesyonel derin temizlik.",
+        "fullDescription": "Düzenli profesyonel diş temizliği, sağlıklı dişler ve diş etleri için gereklidir. Diş hijyen uzmanlarımız plak ve diş taşı birikimini temizlemek, dişlerinizi parlatmak ve kişiselleştirilmiş ağız hijyeni rehberliği sağlamak için ileri teknikler kullanır.",
+        "duration": "45-60 dakika",
+        "benefits": [
+          "Çürük ve diş eti hastalığını önler",
+          "İnatçı lekeleri giderir",
+          "Nefesi tazeler",
+          "Sorunların erken tespiti",
+          "Genel sağlığı korur"
+        ]
+      },
+      "rootCanal": {
+        "title": "Kanal Tedavisi",
+        "description": "Modern teknikler kullanarak nazik, ağrısız kanal tedavisi ile doğal dişinizi kurtarın.",
+        "fullDescription": "Kanal tedavisi, dişinizin içindeki enfekte veya hasarlı pulpayı çıkararak dişi çekimden kurtarır. Modern anestezi ve tekniklerle prosedür rahat ve oldukça başarılıdır.",
+        "duration": "60-90 dakika",
+        "benefits": [
+          "Doğal dişinizi kurtarır",
+          "Ağrıyı hafifletir",
+          "Enfeksiyon yayılmasını önler",
+          "Yüksek başarı oranı",
+          "Rahat prosedür"
+        ]
+      },
+      "cosmetic": {
+        "title": "Kozmetik Diş Hekimliği",
+        "description": "Veneer, bonding ve diğer estetik diş prosedürleri ile gülüşünüzü dönüştürün.",
+        "fullDescription": "Kozmetik diş hekimliği hizmetlerimiz gülüşünüzün görünümünü geliştirir. Porselen venerlerden diş bondinge ve diş eti konturlamasına kadar, estetik hedeflerinize göre uyarlanmış kapsamlı çözümler sunuyoruz.",
+        "duration": "Prosedüre göre değişir",
+        "benefits": [
+          "Gelişmiş gülüş estetiği",
+          "Artan özgüven",
+          "Özelleştirilmiş çözümler",
+          "Doğal görünümlü sonuçlar",
+          "Uzun ömürlü iyileştirmeler"
+        ]
+      }
+    },
+    "duration": "Süre",
+    "benefits": "Faydalar",
+    "learnMore": "Daha Fazla Bilgi",
+    "close": "Kapat",
+    "bookTreatment": "Bu Tedaviyi Rezerve Et",
+    "consultation": {
+      "title": "Hangi tedaviye ihtiyacınız olduğundan emin değil misiniz?",
+      "subtitle": "Bir konsültasyon ayırtın, size mükemmel çözümü bulmada yardımcı olalım.",
+      "button": "Konsültasyon Planla"
+    },
+    "pageSubtitle": "En son teknoloji ve teknikler kullanılarak kapsamlı diş bakımı. Koruyucu bakımdan ileri prosedürlere kadar, her şeyi kapsıyoruz."
+  },
+  "cta": {
+    "title": "En güzel gülüşünüz burada başlar.",
+    "subtitle": "Online bir zaman seçin ve otomatik hatırlatma alın.",
+    "button": "Hemen Randevu Alın"
+  },
+  "team": {
+    "title": "Uzman",
+    "titleHighlight": "Ekibimizle Tanışın",
+    "subtitle": "Deneyimli diş hekimliği profesyonellerimiz, rahat ve samimi bir ortamda size olağanüstü bakım sağlamaya kendini adamıştır.",
+    "disclaimer": "Sorumluluk Reddi:",
+    "disclaimerText": "Burada gösterilen profiller ve görseller kurgusaldır ve yalnızca gösterim amaçlıdır. Gerçek kişiler, yaşayan veya ölü, veya gerçek olaylarla herhangi bir benzerlik tamamen tesadüfidir.",
+    "education": "Eğitim ve Sertifikalar",
+    "achievements": "Önemli Başarılar",
+    "values": {
+      "title": "Temel Değerlerimiz",
+      "patientCare": {
+        "title": "Hasta Odaklı Bakım",
+        "description": "Her etkileşimde konforunuz ve memnuniyetiniz en önemli önceliklerimizdir."
+      },
+      "learning": {
+        "title": "Sürekli Öğrenme",
+        "description": "En son diş hekimliği teknolojileri ve teknikleriyle güncel kalıyoruz."
+      },
+      "integrity": {
+        "title": "Dürüstlük ve Şeffaflık",
+        "description": "Dürüst iletişim ve etik uygulama yaptığımız her şeye rehberlik eder."
+      }
+    },
+    "close": "Kapat"
+  },
+  "reviews": {
+    "title": "Hastalarımız",
+    "titleHighlight": "Ne Diyor",
+    "subtitle": "Memnun hastalarımızdan dürüst yorumları okuyun ve diş bakımımızla ilgili deneyimleri hakkında bilgi edinin.",
+    "verified": "Doğrulanmış Hasta",
+    "treatment": "Tedavi",
+    "stats": {
+      "averageRating": "Ortalama Değerlendirme",
+      "totalReviews": "Toplam Yorum",
+      "fiveStar": "5 Yıldızlı Yorumlar",
+      "recommendation": "Tavsiye Eder"
+    },
+    "filter": {
+      "all": "Tüm Tedaviler",
+      "teethWhitening": "Diş Beyazlatma",
+      "dentalImplants": "Diş İmplantları",
+      "invisibleAligners": "Görünmez Plaklar",
+      "rootCanal": "Kanal Tedavisi",
+      "generalCheckup": "Genel Kontrol",
+      "cosmetic": "Kozmetik Diş Hekimliği",
+      "teethCleaning": "Diş Temizliği",
+      "emergency": "Acil Bakım",
+      "pediatric": "Pediatrik Diş Hekimliği"
+    }
+  },
+  "booking": {
+    "title": "Randevunuzu Alın",
+    "subtitle": "Aşağıdaki formu doldurun, randevunuzu onaylamak için 24 saat içinde size geri döneceğiz.",
+    "form": {
+      "name": "Ad Soyad",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "email": "E-posta",
+      "emailPlaceholder": "ahmet@ornek.com",
+      "phone": "Telefon Numarası",
+      "phonePlaceholder": "+90 (555) 000-0000",
+      "date": "Tercih Edilen Tarih",
+      "time": "Tercih Edilen Saat",
+      "treatment": "Tedavi Türü",
+      "treatmentPlaceholder": "Bir tedavi seçin",
+      "message": "Ek Notlar",
+      "messagePlaceholder": "Diş endişeleriniz hakkında bize bilgi verin...",
+      "submit": "Randevu Al",
+      "cancel": "İptal"
+    },
+    "success": {
+      "title": "Randevu Talep Edildi!",
+      "message": "Aether Smile Studio'yu seçtiğiniz için teşekkür ederiz. Randevu talebinizi aldık ve rezervasyonunuzu onaylamak için 24 saat içinde sizinle iletişime geçeceğiz.",
+      "close": "Kapat"
+    }
+  },
+  "footer": {
+    "tagline": "Kendinden emin gülüşler için modern diş hekimliği.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "treatments": "Tedaviler",
+    "contact": "İletişim",
+    "hours": "Çalışma Saatleri",
+    "weekdays": "Pazartesi - Cuma",
+    "weekdaysTime": "09:00 - 18:00",
+    "saturday": "Cumartesi",
+    "saturdayTime": "10:00 - 16:00",
+    "sunday": "Pazar",
+    "sundayTime": "Kapalı",
+    "social": "Bizi Takip Edin",
+    "rights": "Tüm hakları saklıdır.",
+    "madeWith": "ile yapıldı",
+    "by": "tarafından"
+  },
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "message": "Aradığınız sayfa mevcut değil veya taşınmış.",
+    "button": "Ana Sayfaya Dön"
+  }
+}
